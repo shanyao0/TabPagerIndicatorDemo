@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/MODE_WEIGHT_NOEXPAND_SAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MODE_WEIGHT_NOEXPAND_SAME" />
+
+    <Button
+        android:id="@+id/MODE_WEIGHT_NOEXPAND_NOSAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MODE_WEIGHT_NOEXPAND_NOSAME" />
+
+    <Button
+        android:id="@+id/MODE_NOWEIGHT_NOEXPAND_SAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MODE_NOWEIGHT_NOEXPAND_SAME" />
+
+    <Button
+        android:id="@+id/MODE_NOWEIGHT_NOEXPAND_NOSAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MODE_NOWEIGHT_NOEXPAND_NOSAME" />
+
+    <Button
+        android:id="@+id/MODE_NOWEIGHT_EXPAND_SAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MODE_WEIGHT_EXPAND_SAME" />
+
+    <Button
+        android:id="@+id/MODE_NOWEIGHT_EXPAND_NOSAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MODE_NOWEIGHT_EXPAND_NOSAME" />
+</LinearLayout>

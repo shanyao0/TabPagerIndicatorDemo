@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TabPagerIndicatorDemo</string>
+    <array name="no_expand_titles">
+        <item>全部订单</item>
+        <item>当前订单</item>
+        <item>历史订单</item>
+    </array>
+    <array name="expand_titles">
+        <item>头条</item>
+        <item>娱乐</item>
+        <item>体育</item>
+        <item>网易号</item>
+        <item>北京</item>
+        <item>财经</item>
+        <item>科技</item>
+        <item>汽车</item>
+        <item>时尚</item>
+        <item>图片</item>
+        <item>跟帖</item>
+    </array>
+</resources>
