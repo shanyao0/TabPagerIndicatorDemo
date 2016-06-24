@@ -118,66 +118,6 @@ public class TabPageIndicator extends HorizontalScrollView {
     public TabPageIndicator(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
         this.mContext = context;
-        setFillViewport(true);
-        setWillNotDraw(false);
-
-        tabsContainer = new LinearLayout(context);
-        tabsContainer.setOrientation(LinearLayout.HORIZONTAL);
-        LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-        tabsContainer.setLayoutParams(layoutParams);
-        addView(tabsContainer);
-
-        DisplayMetrics dm = getResources().getDisplayMetrics();
-
-        scrollOffset = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, scrollOffset, dm);
-        indicatorHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, indicatorHeight, dm);
-        underlineHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, underlineHeight, dm);
-        dividerPadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dividerPadding, dm);
-        tabPadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tabPadding, dm);
-        dividerWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dividerWidth, dm);
-        tabTextSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tabTextSize, dm);
-
-        // get system attrs (android:textSize and android:textColor)
-
-        TypedArray a = context.obtainStyledAttributes(attrs, ATTRS);
-
-        tabTextSize = a.getDimensionPixelSize(0, tabTextSize);
-        tabTextColor = a.getColor(R.styleable.PagerSlidingTab_indicatorColor, tabTextColor);
-
-        a.recycle();
-
-        // get custom attrs
-
-        a = context.obtainStyledAttributes(attrs, R.styleable.PagerSlidingTab);
-
-        indicatorColor = a.getColor(R.styleable.PagerSlidingTab_indicatorColor, indicatorColor);
-        underlineColor = a.getColor(R.styleable.PagerSlidingTab_underlineColor, underlineColor);
-        dividerColor = a.getColor(R.styleable.PagerSlidingTab_dividerColor, dividerColor);
-        indicatorHeight = a.getDimensionPixelSize(R.styleable.PagerSlidingTab_indicatorHeight, indicatorHeight);
-        underlineHeight = a.getDimensionPixelSize(R.styleable.PagerSlidingTab_underlineHeight, underlineHeight);
-        dividerPadding = a.getDimensionPixelSize(R.styleable.PagerSlidingTab_pst_dividerPadding, dividerPadding);
-        tabPadding = a.getDimensionPixelSize(R.styleable.PagerSlidingTab_tabPaddingLeftRight, tabPadding);
-        tabBackgroundResId = a.getResourceId(R.styleable.PagerSlidingTab_tabBackgrounds, tabBackgroundResId);
-//        isSameLine = a.getBoolean(R.styleable.PagerSlidingTab_sameLine, isSameLine);
-        scrollOffset = a.getDimensionPixelSize(R.styleable.PagerSlidingTab_scrollOffset, scrollOffset);
-        textAllCaps = a.getBoolean(R.styleable.PagerSlidingTab_pst_textAllCaps, textAllCaps);
-
-        a.recycle();
-
-        rectPaint = new Paint();
-        rectPaint.setAntiAlias(true);
-        rectPaint.setStyle(Style.FILL);
-
-        dividerPaint = new Paint();
-        dividerPaint.setAntiAlias(true);
-        dividerPaint.setStrokeWidth(dividerWidth);
-
-        wrapTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        weightTabLayoutParams = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1.0f);
-
-        if (locale == null) {
-            locale = getResources().getConfiguration().locale;
-        }
     }
 
     public TabPageIndicator(Context context, AttributeSet attrs, int defStyle) {
